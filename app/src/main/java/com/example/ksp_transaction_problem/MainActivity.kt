@@ -10,11 +10,13 @@ class MainActivity: Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val db = MyDatabase_Impl() as DatabaseWithDaos
+        // remove comment below and also get an error
+        val db = MyDatabase_Impl() //as DatabaseWithDaos
+
         db.runInTransaction(Runnable {
             // do stuff with multiple DAO's in ONE transaction
-//            kek.myFirstDao.updateSmth()
-//            kek.mySecondDao.deleteSmth()
+//            db.myFirstDao.updateSmth()
+//            db.mySecondDao.deleteSmth()
         })
     }
 }
