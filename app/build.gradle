@@ -3,12 +3,12 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.devtools.ksp'
-    id "org.jetbrains.kotlin.kapt" // version "1.8.21"
+    id "org.jetbrains.kotlin.kapt" // version "1.9.22"
 }
 
 android {
     namespace 'com.example.room_ksp_problem'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
 
@@ -41,8 +41,9 @@ android {
 
 dependencies {
 
-    def room_version = "2.5.1"
+    def room_version = "2.6.1"
     implementation "androidx.room:room-runtime:$room_version"
+
     // To use Kotlin Symbol Processing (KSP)
     ksp "androidx.room:room-compiler:$room_version"
 
